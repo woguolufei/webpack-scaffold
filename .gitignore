@@ -1,0 +1,13 @@
+.idea/
+*.bak
+.DS_Store
+Thumbs.db
+.svn/
+*.swp
+.nojekyll
+.project
+.settings/
+.npmignore
+node_modules/
+
+build/
