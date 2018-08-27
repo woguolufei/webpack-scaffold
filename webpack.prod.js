@@ -1,8 +1,20 @@
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
+
 module.exports = {
-    entry: './src/index.js',
-    output: {
-        filename: 'bundle.js',
-        path: path.resolve(__dirname, 'dist')
+    entry: require('./webpack-config/entry.config'),
+    devtool: 'source-map',
+    plugins: [
+        new CleanWebpackPlugin(['dist']),
+        new HtmlWebpackPlugin({
+            title: 'Output Management'
+        })
+    ],
+    output: require('./webpack-config/output.config'),
+    watchOptions: {
+        aggregateTimeout: 300,
+        poll: 1000
     },
     module: {
         rules: [
