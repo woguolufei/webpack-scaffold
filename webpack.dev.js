@@ -5,6 +5,7 @@ module.exports = {
     devtool: 'inline-source-map',
     plugins: require('./webpack-config/plugins.config'),
     output: require('./webpack-config/output.config'),
+    optimization :require('./webpack-config/optimization.config'),
     resolve: require('./webpack-config/resolve.config'),
     watchOptions: {
         aggregateTimeout: 300,
